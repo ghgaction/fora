@@ -46,7 +46,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4"/><path d="M3 17l9 4 9-4"/></svg>
         Projects
       </a>
-      <a href="#">
+      <a href="watchlist.html">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4V3z"/></svg>
         Watchlists
       </a>
@@ -85,7 +85,7 @@
       </div>
     </div>
 
-    <main class="page">
+    <main class="page" data-project="PR-KFT-0142" data-project-name="Sungai Merah Peatland Restoration">
 
       <div class="breadcrumb">Projects / <span class="cur">Sungai Merah Peatland Restoration</span> / Carbon Integrity</div>
 
@@ -153,7 +153,7 @@
           <!-- emissions by source -->
           <div>
             <div class="wf-tag"><span class="badge">4</span> Emissions by source — honest about what is quantified vs pending</div>
-            <div class="frame">
+            <div class="frame" data-follow="emissions-by-source">
               <div class="section-title">Emissions by Source <span class="hint">tCO₂e · 2025</span></div>
               <div class="chart-block">Stacked bar / area chart<br>(peat oxidation · forest fire · peat fire)</div>
               <div class="legend-inline">
@@ -190,7 +190,7 @@
           <!-- peat hydrology (the ready one) -->
           <div>
             <div class="wf-tag"><span class="badge">6</span> Peat hydrology — water table over time (strongest live-data section)</div>
-            <div class="frame">
+            <div class="frame" data-follow="peat-water-table">
               <div class="section-title">Peat Water Table <span class="hint">cm below surface · 12 stations</span></div>
               <div class="chart-block">Water-level trend chart<br>(monthly, per station)</div>
               <div class="src-line">Source: hydrology monitoring (hidrologi / GWL) · Status: measured · Keeping the water table high protects stored peat carbon.</div>
@@ -200,7 +200,7 @@
           <!-- fire & disturbance -->
           <div>
             <div class="wf-tag"><span class="badge">7</span> Fire &amp; disturbance — alerts (unverified) vs responded findings</div>
-            <div class="frame stack">
+            <div class="frame stack" data-follow="fire-disturbance">
               <div class="section-title">Fire &amp; Disturbance</div>
               <div class="grid-3">
                 <div class="metric-card">
@@ -226,7 +226,7 @@
           <!-- operations & interventions -->
           <div>
             <div class="wf-tag"><span class="badge">8</span> Project operations &amp; interventions — actively managed</div>
-            <div class="frame stack">
+            <div class="frame stack" data-follow="operations-interventions">
               <div class="section-title">Operations &amp; Interventions</div>
               <table class="facts-table">
                 <tr><td class="k">Patrol coverage</td><td class="v">86% of high-risk area / month · <span class="mono">1,240 km</span></td></tr>
@@ -332,5 +332,6 @@
   </div>
 </div>
 
+<script src="./watchlist.js"></script>
 </body>
 </html>
