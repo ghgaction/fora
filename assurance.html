@@ -46,7 +46,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4"/><path d="M3 17l9 4 9-4"/></svg>
         Projects
       </a>
-      <a href="#">
+      <a href="watchlist.html">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4V3z"/></svg>
         Watchlists
       </a>
@@ -85,7 +85,7 @@
       </div>
     </div>
 
-    <main class="page">
+    <main class="page" data-project="PR-KFT-0142" data-project-name="Sungai Merah Peatland Restoration">
 
       <div class="breadcrumb">Projects / <span class="cur">Sungai Merah Peatland Restoration</span> / Assurance</div>
 
@@ -94,7 +94,7 @@
         <div style="flex:1;">
           <div class="name">Sungai Merah Peatland Restoration</div>
           <div class="loc">Central Kalimantan, Indonesia &middot; Project ID <span class="mono">PR-KFT-0142</span></div>
-          <div class="badge-row">
+          <div class="badge-row" data-follow-project="assurance-status" data-follow-label="Assurance status">
             <span class="chip good">Assurance: Verified</span>
             <span class="chip info">Publication: Published</span>
             <span class="chip neutral">Type: REDD+ / Peatland</span>
@@ -123,7 +123,7 @@
           <!-- Registry & standard -->
           <div>
             <div class="wf-tag"><span class="badge">3</span> Registry identity &amp; standard — "a real, registered project"</div>
-            <div class="frame stack">
+            <div class="frame stack" data-follow="registry-standard">
               <div class="section-title">Registry &amp; Standard</div>
               <table class="facts-table">
                 <tr><td class="k">Standard</td><td class="v">Verra VCS</td></tr>
@@ -174,7 +174,7 @@
           <!-- Credits by vintage -->
           <div>
             <div class="wf-tag"><span class="badge">6</span> Credits by vintage — project-level issuance (not buyer holdings)</div>
-            <div class="frame">
+            <div class="frame" data-follow="credits-by-vintage">
               <div class="section-title">Issued Credits by Vintage</div>
               <table class="data-table">
                 <thead>
@@ -193,7 +193,7 @@
           <!-- Assurance process -->
           <div>
             <div class="wf-tag"><span class="badge">7</span> Assurance process — registration / validation / verification / issuance milestones</div>
-            <div class="frame">
+            <div class="frame" data-follow="assurance-process">
               <div class="section-title">Assurance Process <span class="hint">Verra · VVB · SKUK</span></div>
               <div class="proc">
                 <div class="proc-step">
@@ -298,5 +298,6 @@
   </div>
 </div>
 
+<script src="./watchlist.js"></script>
 </body>
 </html>

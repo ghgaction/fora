@@ -46,7 +46,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4"/><path d="M3 17l9 4 9-4"/></svg>
         Projects
       </a>
-      <a href="#">
+      <a href="watchlist.html">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4V3z"/></svg>
         Watchlists
       </a>
@@ -85,7 +85,7 @@
       </div>
     </div>
 
-    <main class="page">
+    <main class="page" data-project="PR-KFT-0142" data-project-name="Sungai Merah Peatland Restoration">
 
       <div class="breadcrumb">Projects / <span class="cur">Sungai Merah Peatland Restoration</span> / Biodiversity</div>
 
@@ -94,7 +94,7 @@
         <div style="flex:1;">
           <div class="name">Sungai Merah Peatland Restoration</div>
           <div class="loc">Central Kalimantan, Indonesia &middot; Project ID <span class="mono">PR-KFT-0142</span></div>
-          <div class="badge-row">
+          <div class="badge-row" data-follow-project="assurance-status" data-follow-label="Assurance status">
             <span class="chip good">Assurance: Verified</span>
             <span class="chip info">Publication: Published</span>
             <span class="chip neutral">Type: REDD+ / Peatland</span>
@@ -153,7 +153,7 @@
           <!-- species of conservation interest -->
           <div>
             <div class="wf-tag"><span class="badge">4</span> Species of conservation interest — curated highlight (flora + fauna), not the full register</div>
-            <div class="frame stack">
+            <div class="frame stack" data-follow="species-conservation">
               <div class="section-title">Species of Conservation Interest <span class="hint">highlight · IUCN flagged</span></div>
               <div class="src-line" style="margin-top:-4px;">Purpose: evidences the biodiversity co-benefit — a curated subset of threatened &amp; flagship species, not a full taxonomic list. <a href="#" class="link">View full register · 214 species →</a></div>
 
@@ -203,7 +203,7 @@
           <!-- habitat & land use -->
           <div>
             <div class="wf-tag"><span class="badge">6</span> Habitat &amp; land-use — ecosystem types protected within the boundary</div>
-            <div class="frame stack">
+            <div class="frame stack" data-follow="habitat-landuse">
               <div class="section-title">Habitat &amp; Land-Use</div>
               <div class="map-block">Habitat / land-cover map<br>boundary · peat-swamp forest · riparian · degraded</div>
               <table class="facts-table">
@@ -222,7 +222,7 @@
           <!-- ecological co-benefits -->
           <div>
             <div class="wf-tag"><span class="badge">7</span> Ecological co-benefits — authored narrative (Fora Backend), report-ready</div>
-            <div class="frame stack">
+            <div class="frame stack" data-follow="ecological-cobenefits">
               <div class="section-title">Ecological Co-Benefits</div>
               <div class="sdg-row">
                 <span class="sdg-chip">SDG 13</span>
@@ -242,7 +242,7 @@
           <!-- monitoring media -->
           <div>
             <div class="wf-tag"><span class="badge">8</span> Monitoring media — camera-trap &amp; field evidence (location-stripped)</div>
-            <div class="frame">
+            <div class="frame" data-follow="monitoring-media">
               <div class="section-title">Monitoring Media <span class="hint">camera-trap · field photos</span></div>
               <div class="grid-3">
                 <div class="chart-block sm" style="height:96px;">Camera-trap<br>image</div>
@@ -334,5 +334,6 @@
   </div>
 </div>
 
+<script src="./watchlist.js"></script>
 </body>
 </html>

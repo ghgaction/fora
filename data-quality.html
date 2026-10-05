@@ -46,7 +46,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4"/><path d="M3 17l9 4 9-4"/></svg>
         Projects
       </a>
-      <a href="#">
+      <a href="watchlist.html">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4V3z"/></svg>
         Watchlists
       </a>
@@ -85,7 +85,7 @@
       </div>
     </div>
 
-    <main class="page">
+    <main class="page" data-project="PR-KFT-0142" data-project-name="Sungai Merah Peatland Restoration">
 
       <div class="breadcrumb">Projects / <span class="cur">Sungai Merah Peatland Restoration</span> / Data Quality</div>
 
@@ -94,7 +94,7 @@
         <div style="flex:1;">
           <div class="name">Sungai Merah Peatland Restoration</div>
           <div class="loc">Central Kalimantan, Indonesia &middot; Project ID <span class="mono">PR-KFT-0142</span></div>
-          <div class="badge-row">
+          <div class="badge-row" data-follow-project="assurance-status" data-follow-label="Assurance status">
             <span class="chip good">Assurance: Verified</span>
             <span class="chip info">Publication: Published</span>
             <span class="chip neutral">Type: REDD+ / Peatland</span>
@@ -136,7 +136,7 @@
           <!-- completeness by package -->
           <div>
             <div class="wf-tag"><span class="badge">4</span> Completeness by package — where disclosure is full vs still filling in</div>
-            <div class="frame stack">
+            <div class="frame stack" data-follow="completeness-by-package">
               <div class="section-title">Completeness by Package</div>
               <div class="meter">
                 <div class="meter-head"><span>Project Description</span><span class="count mono">8 / 8</span></div>
@@ -180,7 +180,7 @@
           <!-- known gaps -->
           <div>
             <div class="wf-tag"><span class="badge">6</span> Known gaps — pending items stated openly (honesty &gt; completeness)</div>
-            <div class="frame">
+            <div class="frame" data-follow="known-gaps">
               <div class="section-title">Known Gaps &amp; Pending Items</div>
               <div class="activity-row">
                 <span class="activity-dot warn"></span>
@@ -284,5 +284,6 @@
   </div>
 </div>
 
+<script src="./watchlist.js"></script>
 </body>
 </html>

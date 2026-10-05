@@ -46,7 +46,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4"/><path d="M3 17l9 4 9-4"/></svg>
         Projects
       </a>
-      <a href="#">
+      <a href="watchlist.html">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4V3z"/></svg>
         Watchlists
       </a>
@@ -85,7 +85,7 @@
       </div>
     </div>
 
-    <main class="page">
+    <main class="page" data-project="PR-KFT-0142" data-project-name="Sungai Merah Peatland Restoration">
 
       <div class="breadcrumb">Projects / <span class="cur">Sungai Merah Peatland Restoration</span> / Community</div>
 
@@ -94,7 +94,7 @@
         <div style="flex:1;">
           <div class="name">Sungai Merah Peatland Restoration</div>
           <div class="loc">Central Kalimantan, Indonesia &middot; Project ID <span class="mono">PR-KFT-0142</span></div>
-          <div class="badge-row">
+          <div class="badge-row" data-follow-project="assurance-status" data-follow-label="Assurance status">
             <span class="chip good">Assurance: Verified</span>
             <span class="chip info">Publication: Published</span>
             <span class="chip neutral">Type: REDD+ / Peatland</span>
@@ -131,7 +131,7 @@
           <!-- FPIC & consent -->
           <div>
             <div class="wf-tag"><span class="badge">3</span> FPIC &amp; consent — the social licence foundation (from field app sosial / FPIC)</div>
-            <div class="frame stack">
+            <div class="frame stack" data-follow="fpic-consent">
               <div class="section-title">Free, Prior &amp; Informed Consent</div>
               <div class="grid-3">
                 <div class="metric-card">
@@ -157,7 +157,7 @@
           <!-- grievance mechanism — aggregate only -->
           <div>
             <div class="wf-tag"><span class="badge">4</span> Grievance mechanism — aggregate counts only; the most sensitive disclosure class</div>
-            <div class="frame stack">
+            <div class="frame stack" data-follow="grievances">
               <div class="section-title">Grievance Mechanism <span class="hint">aggregate · 2025</span></div>
               <div class="grid-3">
                 <div class="metric-card">
@@ -205,7 +205,7 @@
           <!-- benefit sharing -->
           <div>
             <div class="wf-tag"><span class="badge">6</span> Community benefit-sharing — authored programme content (Fora Backend)</div>
-            <div class="frame stack">
+            <div class="frame stack" data-follow="benefit-sharing">
               <div class="section-title">Benefit-Sharing &amp; Livelihoods</div>
               <table class="facts-table">
                 <tr><td class="k">Benefit-sharing model</td><td class="v">Revenue share + direct community programmes</td></tr>
@@ -224,7 +224,7 @@
           <!-- SDG narratives -->
           <div>
             <div class="wf-tag"><span class="badge">7</span> SDG programme narratives — report-ready co-benefits (CSRD / CDP / SBTi)</div>
-            <div class="frame stack">
+            <div class="frame stack" data-follow="sdg-narratives">
               <div class="section-title">SDG Programme Narratives</div>
               <div class="sdg-row">
                 <span class="sdg-chip">SDG 1</span>
@@ -246,7 +246,7 @@
           <!-- stakeholder engagement -->
           <div>
             <div class="wf-tag"><span class="badge">8</span> Stakeholder engagement — consultation activity pulse</div>
-            <div class="frame stack">
+            <div class="frame stack" data-follow="stakeholder-engagement">
               <div class="section-title">Stakeholder Engagement</div>
               <table class="facts-table">
                 <tr><td class="k">Consultations held (2025)</td><td class="v"><span class="mono">18</span> community meetings</td></tr>
@@ -338,5 +338,6 @@
   </div>
 </div>
 
+<script src="./watchlist.js"></script>
 </body>
 </html>
