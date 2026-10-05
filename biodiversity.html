@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Biodiversity | ForaOS Buyer Platform</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2216%22%20fill%3D%22%2316a34a%22/%3E%3Crect%20x%3D%229%22%20y%3D%2217%22%20width%3D%223.4%22%20height%3D%227%22%20rx%3D%221%22%20fill%3D%22%23fff%22/%3E%3Crect%20x%3D%2214.3%22%20y%3D%2213%22%20width%3D%223.4%22%20height%3D%2211%22%20rx%3D%221%22%20fill%3D%22%23fff%22/%3E%3Crect%20x%3D%2219.6%22%20y%3D%229%22%20width%3D%223.4%22%20height%3D%2215%22%20rx%3D%221%22%20fill%3D%22%23fff%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="wf-chrome-note">Low-fidelity wireframe &mdash; <strong>Biodiversity (/projects/:projectId &rarr; Biodiversity)</strong> &middot; visual identity aligned to PBPH-RE (pbph.ghgactions.id)</div>
+
+<div class="shell">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-label="ForaOS">
+        <defs>
+          <linearGradient id="mark6" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#22c55e"/>
+            <stop offset="1" stop-color="#15803d"/>
+          </linearGradient>
+        </defs>
+        <circle cx="16" cy="16" r="16" fill="url(#mark6)"/>
+        <rect x="9" y="17" width="3.4" height="7" rx="1" fill="#fff"/>
+        <rect x="14.3" y="13" width="3.4" height="11" rx="1" fill="#fff"/>
+        <rect x="19.6" y="9" width="3.4" height="15" rx="1" fill="#fff"/>
+      </svg>
+      <div class="wordmark">ForaOS</div>
+    </div>
+
+    <div class="org-switch">
+      Kalimantan Forest Trust
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Dashboard
+      </a>
+      <a class="active" href="project-overview.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4"/><path d="M3 17l9 4 9-4"/></svg>
+        Projects
+      </a>
+      <a href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4V3z"/></svg>
+        Watchlists
+      </a>
+      <a href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7V3z"/><path d="M10 12h6M10 16h6M10 8h3"/></svg>
+        Reports
+      </a>
+    </nav>
+
+    <div class="sidebar-spacer"></div>
+
+    <div class="sidebar-sync"><span class="pulse"></span> Synced with PBPH-RE</div>
+    <div class="sidebar-user">
+      <div class="avatar">AS</div>
+      <div>
+        <div class="who">A. Salim</div>
+        <div class="role">buyer_viewer</div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar-slim">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        Search projects, documents…
+      </div>
+      <div class="topbar-right">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode" onclick="document.documentElement.classList.toggle('dark')" style="background:none;padding:0;font:inherit;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+        </button>
+        <div class="icon-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 10-12 0c0 4-2 5-2 6h16c0-1-2-2-2-6z"/><path d="M10.3 21a2 2 0 003.4 0"/></svg>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </div>
+
+    <main class="page">
+
+      <div class="breadcrumb">Projects / <span class="cur">Sungai Merah Peatland Restoration</span> / Biodiversity</div>
+
+      <div class="wf-tag"><span class="badge">1</span> ProjectOverviewHeader — identity, location, status, freshness</div>
+      <div class="ov-header">
+        <div style="flex:1;">
+          <div class="name">Sungai Merah Peatland Restoration</div>
+          <div class="loc">Central Kalimantan, Indonesia &middot; Project ID <span class="mono">PR-KFT-0142</span></div>
+          <div class="badge-row">
+            <span class="chip good">Assurance: Verified</span>
+            <span class="chip info">Publication: Published</span>
+            <span class="chip neutral">Type: REDD+ / Peatland</span>
+          </div>
+          <div class="meta">Last updated 3 days ago &middot; synced from PBPH-RE on <span class="mono">10 Sep 2026, 09:00</span></div>
+        </div>
+        <div class="hero-thumb">Project boundary<br>map thumbnail</div>
+      </div>
+
+      <div class="wf-tag"><span class="badge">2</span> Sub-navigation — Biodiversity tab active</div>
+      <nav class="tabs">
+        <a href="project-overview.html">Overview</a>
+        <a href="assurance.html">Assurance</a>
+        <a href="carbon-integrity.html">Carbon Integrity</a>
+        <a href="community.html">Community</a>
+        <a class="active" href="biodiversity.html">Biodiversity</a>
+        <a href="documents.html">Documents</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="data-quality.html">Data Quality</a>
+      </nav>
+
+      <!-- reporting period context -->
+      <div class="search-row" style="align-items:center;">
+        <div style="font-size:12.5px;color:var(--gray-700);font-weight:600;">Reporting period</div>
+        <div class="filter-chip">Jan – Dec 2025 ▾</div>
+        <div style="flex:1;"></div>
+        <span class="chip neutral">Periodic report &middot; not a live feed</span>
+      </div>
+
+      <div class="layout-2col">
+        <!-- main column -->
+        <div class="stack">
+
+          <!-- biodiversity summary -->
+          <div>
+            <div class="wf-tag"><span class="badge">3</span> Biodiversity summary — headline figures, each labelled measured / registry</div>
+            <div class="grid-3">
+              <div class="metric-card">
+                <div class="label">Species Recorded</div>
+                <div class="value-row"><span class="value mono">214</span><span class="unit">species</span></div>
+                <div class="disclosure-line">156 fauna · 58 flora · Status: measured</div>
+              </div>
+              <div class="metric-card">
+                <div class="label">Threatened Species</div>
+                <div class="value-row"><span class="value mono">11</span><span class="unit">IUCN VU–CR</span></div>
+                <div class="disclosure-line warn" style="color:var(--warn);">Priority conservation value</div>
+              </div>
+              <div class="metric-card">
+                <div class="label">Habitat Protected</div>
+                <div class="value-row"><span class="value mono">18,400</span><span class="unit">ha</span></div>
+                <div class="disclosure-line">Source: boundary / land-use · Status: measured</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- species of conservation interest -->
+          <div>
+            <div class="wf-tag"><span class="badge">4</span> Species of conservation interest — curated highlight (flora + fauna), not the full register</div>
+            <div class="frame stack">
+              <div class="section-title">Species of Conservation Interest <span class="hint">highlight · IUCN flagged</span></div>
+              <div class="src-line" style="margin-top:-4px;">Purpose: evidences the biodiversity co-benefit — a curated subset of threatened &amp; flagship species, not a full taxonomic list. <a href="#" class="link">View full register · 214 species →</a></div>
+
+              <div>
+                <div style="font-size:11px;font-weight:600;color:var(--gray-500);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Fauna</div>
+                <table class="facts-table">
+                  <tr><td class="k">Bornean orangutan</td><td class="v"><em>Pongo pygmaeus</em> <span class="chip danger">CR — Critically Endangered</span></td></tr>
+                  <tr><td class="k">Sunda pangolin</td><td class="v"><em>Manis javanica</em> <span class="chip danger">CR — Critically Endangered</span></td></tr>
+                  <tr><td class="k">Proboscis monkey</td><td class="v"><em>Nasalis larvatus</em> <span class="chip danger">EN — Endangered</span></td></tr>
+                  <tr><td class="k">Storm's stork</td><td class="v"><em>Ciconia stormi</em> <span class="chip danger">EN — Endangered</span></td></tr>
+                  <tr><td class="k">Rhinoceros hornbill</td><td class="v"><em>Buceros rhinoceros</em> <span class="chip warn">VU — Vulnerable</span></td></tr>
+                </table>
+              </div>
+
+              <div>
+                <div style="font-size:11px;font-weight:600;color:var(--gray-500);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Flora</div>
+                <table class="facts-table">
+                  <tr><td class="k">Ramin</td><td class="v"><em>Gonystylus bancanus</em> <span class="chip warn">VU — Vulnerable</span> <span class="chip info">CITES II</span></td></tr>
+                  <tr><td class="k">Jelutung rawa</td><td class="v"><em>Dyera polyphylla</em> <span class="chip warn">VU — Vulnerable</span></td></tr>
+                  <tr><td class="k">Tropical pitcher plant</td><td class="v"><em>Nepenthes</em> spp. <span class="chip info">CITES II</span></td></tr>
+                </table>
+              </div>
+
+              <div class="redaction-note">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                <div>Exact locations for threatened species are <strong>masked / generalised</strong> to reduce poaching &amp; illegal-logging risk, per the data-classification policy (§6.5). Buyers see presence &amp; IUCN status, not precise locations.</div>
+              </div>
+              <div class="src-line">Source: field species register (<span class="mono">keanekaragaman</span> / monitoring) · Status: measured · Full register (214 species — flora &amp; fauna) available to entitled viewers &amp; in the evidence pack.</div>
+            </div>
+          </div>
+
+          <!-- species by IUCN status -->
+          <div>
+            <div class="wf-tag"><span class="badge">5</span> Species by IUCN status — distribution across threat categories</div>
+            <div class="frame">
+              <div class="section-title">Species by IUCN Status <span class="hint">count · 2025</span></div>
+              <div class="chart-block sm">Stacked bar chart<br>(LC · NT · VU · EN · CR)</div>
+              <div class="legend-inline">
+                <span><span class="swatch" style="background:var(--accent);"></span>Least concern</span>
+                <span><span class="swatch" style="background:var(--warn);"></span>Vulnerable</span>
+                <span><span class="swatch" style="background:var(--danger);"></span>Endangered / CR</span>
+              </div>
+              <div class="src-line">Threat categories referenced to the IUCN Red List at time of survey.</div>
+            </div>
+          </div>
+
+          <!-- habitat & land use -->
+          <div>
+            <div class="wf-tag"><span class="badge">6</span> Habitat &amp; land-use — ecosystem types protected within the boundary</div>
+            <div class="frame stack">
+              <div class="section-title">Habitat &amp; Land-Use</div>
+              <div class="map-block">Habitat / land-cover map<br>boundary · peat-swamp forest · riparian · degraded</div>
+              <table class="facts-table">
+                <tr><td class="k">Peat-swamp forest</td><td class="v"><span class="mono">12,900 ha</span> · primary habitat</td></tr>
+                <tr><td class="k">Riparian &amp; waterways</td><td class="v"><span class="mono">2,100 ha</span></td></tr>
+                <tr><td class="k">Under restoration</td><td class="v"><span class="mono">3,400 ha</span> · rewetting &amp; replanting</td></tr>
+              </table>
+              <div class="meter-pending" style="margin-top:4px;">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg>
+                Habitat-change (time-series) layer pending remote-sensing / GIS pipeline.
+              </div>
+              <div class="src-line">Source: boundary / land-use classification · Status: measured (current); change-over-time pending.</div>
+            </div>
+          </div>
+
+          <!-- ecological co-benefits -->
+          <div>
+            <div class="wf-tag"><span class="badge">7</span> Ecological co-benefits — authored narrative (Fora Backend), report-ready</div>
+            <div class="frame stack">
+              <div class="section-title">Ecological Co-Benefits</div>
+              <div class="sdg-row">
+                <span class="sdg-chip">SDG 13</span>
+                <span class="sdg-chip">SDG 14</span>
+                <span class="sdg-chip">SDG 15</span>
+              </div>
+              <div style="margin-top:12px;">
+                <div style="font-size:12.5px;font-weight:600;color:var(--gray-900);margin-bottom:4px;">SDG 15 — Life on Land</div>
+                <div class="sk-line w-95"></div>
+                <div class="sk-line w-88"></div>
+                <div class="sk-line w-60"></div>
+              </div>
+              <div class="src-line">Source: Fora Backend (authored, reviewed before publish) · Status: editorial · Framed for reporting; claims link to the species register &amp; evidence in Documents.</div>
+            </div>
+          </div>
+
+          <!-- monitoring media -->
+          <div>
+            <div class="wf-tag"><span class="badge">8</span> Monitoring media — camera-trap &amp; field evidence (location-stripped)</div>
+            <div class="frame">
+              <div class="section-title">Monitoring Media <span class="hint">camera-trap · field photos</span></div>
+              <div class="grid-3">
+                <div class="chart-block sm" style="height:96px;">Camera-trap<br>image</div>
+                <div class="chart-block sm" style="height:96px;">Field photo</div>
+                <div class="chart-block sm" style="height:96px;">Camera-trap<br>image</div>
+              </div>
+              <div class="src-line">Source: field media · Status: measured · EXIF / geotags stripped before publication for threatened-species records.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- sidebar -->
+        <div class="stack">
+
+          <div>
+            <div class="wf-tag"><span class="badge">9</span> Biodiversity at a glance</div>
+            <div class="panel">
+              <div class="section-title">At a Glance</div>
+              <table class="fresh-table">
+                <tr><td class="pkg"><span class="status-dot good"></span>Species register</td><td class="stamp">measured</td></tr>
+                <tr><td class="pkg"><span class="status-dot good"></span>Habitat (current)</td><td class="stamp">measured</td></tr>
+                <tr><td class="pkg"><span class="status-dot good"></span>Monitoring media</td><td class="stamp">measured</td></tr>
+                <tr><td class="pkg"><span class="status-dot warn"></span>Habitat change</td><td class="stamp">pending</td></tr>
+              </table>
+            </div>
+          </div>
+
+          <div>
+            <div class="wf-tag"><span class="badge">10</span> Biodiversity data completeness — honesty signal</div>
+            <div class="panel">
+              <div class="section-title">Data Completeness</div>
+              <div class="meter">
+                <div class="meter-head"><span>Biodiversity items published</span><span class="count mono">6 / 8</span></div>
+                <div class="meter-track"><div class="meter-fill" style="width:75%;"></div></div>
+                <div class="meter-note">Shows how much is disclosed — not a judgement of quality.</div>
+                <div class="meter-pending">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg>
+                  Pending: habitat-change series · connectivity analysis
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="wf-tag"><span class="badge">11</span> How species data is shown — sensitivity &amp; location masking</div>
+            <div class="panel">
+              <div class="section-title">How This Is Shown</div>
+              <div class="legend-inline" style="flex-direction:column;gap:7px;">
+                <span><span class="chip good">presence</span> species &amp; IUCN status shown</span>
+                <span><span class="chip warn">masked</span> precise locations generalised</span>
+                <span><span class="chip info">registry</span> IUCN Red List reference</span>
+              </div>
+              <div style="font-size:11px;color:var(--gray-500);margin-top:10px;">Exact locations of threatened species are withheld to reduce poaching risk (data-classification policy §6.5), decided at the Fora disclosure gate.</div>
+            </div>
+          </div>
+
+          <div>
+            <div class="wf-tag"><span class="badge">12</span> Data freshness</div>
+            <div class="panel">
+              <div class="section-title">Data Freshness</div>
+              <div style="font-size:11.5px;color:var(--gray-700);">Reporting period <strong>2025</strong><br>Last synced from PBPH-RE<br><strong class="mono">1 Sep 2026</strong></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="legend">
+        <h2>Annotation Reference</h2>
+        <ol>
+          <li><span class="badge">1</span><div><strong>ProjectOverviewHeader</strong> — shared project identity header, consistent across tabs.</div></li>
+          <li><span class="badge">2</span><div><strong>Sub-navigation</strong> — Biodiversity tab active.</div></li>
+          <li><span class="badge">3</span><div><strong>Biodiversity summary</strong> — headline figures (species recorded, threatened species, habitat protected), each labelled measured / registry per FR-VIS-06.</div></li>
+          <li><span class="badge">4</span><div><strong>Species of conservation interest</strong> — a curated <em>highlight</em> (both flora &amp; fauna) that evidences the biodiversity co-benefit, <em>not</em> a full taxonomic dump; the complete 214-species register sits behind "view full register" and in the evidence pack. Precise locations for threatened species are masked to reduce poaching / illegal-logging risk (§6.5) — buyers see presence &amp; status, not locations.</div></li>
+          <li><span class="badge">5</span><div><strong>Species by IUCN status</strong> — distribution across threat categories, referenced to the IUCN Red List.</div></li>
+          <li><span class="badge">6</span><div><strong>Habitat &amp; land-use</strong> — ecosystem types protected within the boundary; current state is measured, change-over-time is flagged pending the GIS pipeline.</div></li>
+          <li><span class="badge">7</span><div><strong>Ecological co-benefits</strong> — authored narrative from the Fora Backend, framed for reporting; claims link back to the species register and evidence in Documents.</div></li>
+          <li><span class="badge">8</span><div><strong>Monitoring media</strong> — camera-trap and field evidence; EXIF / geotags stripped before publication for threatened-species records.</div></li>
+          <li><span class="badge">9</span><div><strong>At a glance</strong> — per-section data status (measured / pending).</div></li>
+          <li><span class="badge">10</span><div><strong>Biodiversity data completeness meter</strong> — filled vs pending; an honesty signal, not a quality score.</div></li>
+          <li><span class="badge">11</span><div><strong>Sensitivity &amp; location masking</strong> — explains why threatened-species locations are withheld; the Fora disclosure gate controls buyer visibility separately from operational QC.</div></li>
+          <li><span class="badge">12</span><div><strong>Data freshness</strong> — reporting period + last-sync; periodic, not a live feed.</div></li>
+        </ol>
+      </div>
+
+      <div class="disclosure">Threatened-species locations are masked and media geotags stripped per the data-classification policy; measured, registry-referenced, and authored content are distinguished per FR-VIS-06; status labels follow Appendix A. Wireframe for internal review — structure and hierarchy only; colors/type mirror PBPH-RE's production theme.</div>
+    </main>
+  </div>
+</div>
+
+</body>
+</html>

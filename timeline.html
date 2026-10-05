@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Timeline | ForaOS Buyer Platform</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2216%22%20fill%3D%22%2316a34a%22/%3E%3Crect%20x%3D%229%22%20y%3D%2217%22%20width%3D%223.4%22%20height%3D%227%22%20rx%3D%221%22%20fill%3D%22%23fff%22/%3E%3Crect%20x%3D%2214.3%22%20y%3D%2213%22%20width%3D%223.4%22%20height%3D%2211%22%20rx%3D%221%22%20fill%3D%22%23fff%22/%3E%3Crect%20x%3D%2219.6%22%20y%3D%229%22%20width%3D%223.4%22%20height%3D%2215%22%20rx%3D%221%22%20fill%3D%22%23fff%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="wf-chrome-note">Low-fidelity wireframe &mdash; <strong>Timeline (/projects/:projectId &rarr; Timeline)</strong> &middot; visual identity aligned to PBPH-RE (pbph.ghgactions.id)</div>
+
+<div class="shell">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-label="ForaOS">
+        <defs>
+          <linearGradient id="mark8" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#22c55e"/>
+            <stop offset="1" stop-color="#15803d"/>
+          </linearGradient>
+        </defs>
+        <circle cx="16" cy="16" r="16" fill="url(#mark8)"/>
+        <rect x="9" y="17" width="3.4" height="7" rx="1" fill="#fff"/>
+        <rect x="14.3" y="13" width="3.4" height="11" rx="1" fill="#fff"/>
+        <rect x="19.6" y="9" width="3.4" height="15" rx="1" fill="#fff"/>
+      </svg>
+      <div class="wordmark">ForaOS</div>
+    </div>
+
+    <div class="org-switch">
+      Kalimantan Forest Trust
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Dashboard
+      </a>
+      <a class="active" href="project-overview.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4"/><path d="M3 17l9 4 9-4"/></svg>
+        Projects
+      </a>
+      <a href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4V3z"/></svg>
+        Watchlists
+      </a>
+      <a href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7V3z"/><path d="M10 12h6M10 16h6M10 8h3"/></svg>
+        Reports
+      </a>
+    </nav>
+
+    <div class="sidebar-spacer"></div>
+
+    <div class="sidebar-sync"><span class="pulse"></span> Synced with PBPH-RE</div>
+    <div class="sidebar-user">
+      <div class="avatar">AS</div>
+      <div>
+        <div class="who">A. Salim</div>
+        <div class="role">buyer_viewer</div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar-slim">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        Search projects, documents…
+      </div>
+      <div class="topbar-right">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode" onclick="document.documentElement.classList.toggle('dark')" style="background:none;padding:0;font:inherit;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+        </button>
+        <div class="icon-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 10-12 0c0 4-2 5-2 6h16c0-1-2-2-2-6z"/><path d="M10.3 21a2 2 0 003.4 0"/></svg>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </div>
+
+    <main class="page">
+
+      <div class="breadcrumb">Projects / <span class="cur">Sungai Merah Peatland Restoration</span> / Timeline</div>
+
+      <div class="wf-tag"><span class="badge">1</span> ProjectOverviewHeader — identity, location, status, freshness</div>
+      <div class="ov-header">
+        <div style="flex:1;">
+          <div class="name">Sungai Merah Peatland Restoration</div>
+          <div class="loc">Central Kalimantan, Indonesia &middot; Project ID <span class="mono">PR-KFT-0142</span></div>
+          <div class="badge-row">
+            <span class="chip good">Assurance: Verified</span>
+            <span class="chip info">Publication: Published</span>
+            <span class="chip neutral">Type: REDD+ / Peatland</span>
+          </div>
+          <div class="meta">Last updated 3 days ago &middot; synced from PBPH-RE on <span class="mono">10 Sep 2026, 09:00</span></div>
+        </div>
+        <div class="hero-thumb">Project boundary<br>map thumbnail</div>
+      </div>
+
+      <div class="wf-tag"><span class="badge">2</span> Sub-navigation — Timeline tab active</div>
+      <nav class="tabs">
+        <a href="project-overview.html">Overview</a>
+        <a href="assurance.html">Assurance</a>
+        <a href="carbon-integrity.html">Carbon Integrity</a>
+        <a href="community.html">Community</a>
+        <a href="biodiversity.html">Biodiversity</a>
+        <a href="documents.html">Documents</a>
+        <a class="active" href="timeline.html">Timeline</a>
+        <a href="data-quality.html">Data Quality</a>
+      </nav>
+
+      <!-- filter context -->
+      <div class="search-row" style="align-items:center;">
+        <div style="font-size:12.5px;color:var(--gray-700);font-weight:600;">Filter</div>
+        <div class="filter-chip">All event types ▾</div>
+        <div class="filter-chip">2022 – 2026 ▾</div>
+        <div style="flex:1;"></div>
+        <span class="chip neutral">Milestones &amp; responded events · not raw alerts</span>
+      </div>
+
+      <div class="layout-2col">
+        <!-- main column -->
+        <div class="stack">
+
+          <div>
+            <div class="wf-tag"><span class="badge">3</span> Project timeline — milestones, publications, and incidents paired with their response</div>
+            <div class="frame">
+              <div class="section-title">Project History</div>
+              <div class="timeline">
+                <div class="tl-item">
+                  <div class="tl-date mono">10 Sep 2026</div>
+                  <div class="tl-title">Assurance report published <span class="chip good">assurance</span></div>
+                  <div class="tl-desc">Verified status reaffirmed; assurance package updated for buyers.</div>
+                </div>
+                <div class="tl-item info">
+                  <div class="tl-date mono">03 Sep 2026</div>
+                  <div class="tl-title">Community disclosures refreshed <span class="chip info">community</span></div>
+                  <div class="tl-desc">Grievance log (aggregate) and benefit-sharing report updated.</div>
+                </div>
+                <div class="tl-item">
+                  <div class="tl-date mono">28 Aug 2026</div>
+                  <div class="tl-title">Verification statement issued — 2025 period <span class="chip good">registry</span></div>
+                  <div class="tl-desc">Third-party V&amp;V completed; emission reductions verified for 2025.</div>
+                </div>
+                <div class="tl-item warn">
+                  <div class="tl-date mono">15 Aug 2026</div>
+                  <div class="tl-title">Fire detected &amp; contained — Sector 4 <span class="chip warn">incident · resolved</span></div>
+                  <div class="tl-desc">Satellite hotspot confirmed by patrol; contained within 24h. No credited-area loss.</div>
+                </div>
+                <div class="tl-item">
+                  <div class="tl-date mono">12 Jun 2026</div>
+                  <div class="tl-title">Project Design Document v3.0 published <span class="chip good">document</span></div>
+                  <div class="tl-desc">Updated PDD covering methodology and claim boundary.</div>
+                </div>
+                <div class="tl-item info">
+                  <div class="tl-date mono">01 Mar 2026</div>
+                  <div class="tl-title">Monitoring period 2025 opened <span class="chip info">monitoring</span></div>
+                  <div class="tl-desc">Field data collection for the 2025 reporting period began.</div>
+                </div>
+                <div class="tl-item">
+                  <div class="tl-date mono">20 Nov 2025</div>
+                  <div class="tl-title">Peat rewetting milestone — 1,200 ha <span class="chip good">intervention</span></div>
+                  <div class="tl-desc">Canal-blocking programme completed across target sectors; supports permanence.</div>
+                </div>
+                <div class="tl-item">
+                  <div class="tl-date mono">Jun 2025</div>
+                  <div class="tl-title">FPIC reaffirmed with 6 communities <span class="chip good">consent</span></div>
+                  <div class="tl-desc">Consent review completed across all participating villages.</div>
+                </div>
+                <div class="tl-item info">
+                  <div class="tl-date mono">2022</div>
+                  <div class="tl-title">Project registered — crediting period start <span class="chip info">registry</span></div>
+                  <div class="tl-desc">Listed on Verra VCS; crediting period 2022–2042.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- sidebar -->
+        <div class="stack">
+
+          <div>
+            <div class="wf-tag"><span class="badge">4</span> Event types</div>
+            <div class="panel">
+              <div class="section-title">Event Types</div>
+              <div class="legend-inline" style="flex-direction:column;gap:7px;">
+                <span><span class="activity-dot accent"></span>Publications &amp; milestones</span>
+                <span><span class="activity-dot" style="background:var(--info);"></span>Monitoring &amp; community</span>
+                <span><span class="activity-dot warn"></span>Incidents (shown with response)</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="wf-tag"><span class="badge">5</span> At a glance</div>
+            <div class="panel">
+              <div class="section-title">At a Glance</div>
+              <table class="fresh-table">
+                <tr><td class="pkg">Verifications</td><td class="stamp mono">3</td></tr>
+                <tr><td class="pkg">Incidents (all resolved)</td><td class="stamp mono">4</td></tr>
+                <tr><td class="pkg">Documents published</td><td class="stamp mono">11</td></tr>
+                <tr><td class="pkg">Years active</td><td class="stamp mono">4</td></tr>
+              </table>
+            </div>
+          </div>
+
+          <div>
+            <div class="wf-tag"><span class="badge">6</span> How events are shown</div>
+            <div class="panel">
+              <div class="section-title">How This Is Shown</div>
+              <div style="font-size:11.5px;color:var(--gray-700);line-height:1.5;">Incidents appear only once <strong>responded to</strong> — paired with their resolution, never as a raw panic alert. This is a periodic record, not a live control room.</div>
+            </div>
+          </div>
+
+          <div>
+            <div class="wf-tag"><span class="badge">7</span> Data freshness</div>
+            <div class="panel">
+              <div class="section-title">Data Freshness</div>
+              <div style="font-size:11.5px;color:var(--gray-700);">Timeline current as of<br><strong class="mono">10 Sep 2026</strong></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="legend">
+        <h2>Annotation Reference</h2>
+        <ol>
+          <li><span class="badge">1</span><div><strong>ProjectOverviewHeader</strong> — shared project identity header, consistent across tabs.</div></li>
+          <li><span class="badge">2</span><div><strong>Sub-navigation</strong> — Timeline tab active.</div></li>
+          <li><span class="badge">3</span><div><strong>Project timeline</strong> — chronological milestones, publications, interventions and incidents. Incidents are shown <em>paired with their response</em> (e.g. "fire detected &amp; contained"), reflecting the "every problem with its response" principle — never a raw alert.</div></li>
+          <li><span class="badge">4</span><div><strong>Event types</strong> — colour key for publications/milestones, monitoring/community, and resolved incidents.</div></li>
+          <li><span class="badge">5</span><div><strong>At a glance</strong> — quick counts across the project's history.</div></li>
+          <li><span class="badge">6</span><div><strong>How events are shown</strong> — incidents surface only once responded to; a periodic record, not a live control room.</div></li>
+          <li><span class="badge">7</span><div><strong>Data freshness</strong> — timeline as-of date; periodic, not a live feed.</div></li>
+        </ol>
+      </div>
+
+      <div class="disclosure">Incidents are disclosed with their response, not as raw alerts; the timeline is a periodic, QC-checked record rather than a live feed. Status labels follow Appendix A. Wireframe for internal review — structure and hierarchy only; colors/type mirror PBPH-RE's production theme.</div>
+    </main>
+  </div>
+</div>
+
+</body>
+</html>

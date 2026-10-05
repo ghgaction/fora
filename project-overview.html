@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Project Overview | ForaOS Buyer Platform</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2216%22%20fill%3D%22%2316a34a%22/%3E%3Crect%20x%3D%229%22%20y%3D%2217%22%20width%3D%223.4%22%20height%3D%227%22%20rx%3D%221%22%20fill%3D%22%23fff%22/%3E%3Crect%20x%3D%2214.3%22%20y%3D%2213%22%20width%3D%223.4%22%20height%3D%2211%22%20rx%3D%221%22%20fill%3D%22%23fff%22/%3E%3Crect%20x%3D%2219.6%22%20y%3D%229%22%20width%3D%223.4%22%20height%3D%2215%22%20rx%3D%221%22%20fill%3D%22%23fff%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="wf-chrome-note">Low-fidelity wireframe &mdash; <strong>Project Overview (/projects/:projectId)</strong> &middot; visual identity aligned to PBPH-RE (pbph.ghgactions.id)</div>
+
+<div class="shell">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-label="ForaOS">
+        <defs>
+          <linearGradient id="mark2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#22c55e"/>
+            <stop offset="1" stop-color="#15803d"/>
+          </linearGradient>
+        </defs>
+        <circle cx="16" cy="16" r="16" fill="url(#mark2)"/>
+        <rect x="9" y="17" width="3.4" height="7" rx="1" fill="#fff"/>
+        <rect x="14.3" y="13" width="3.4" height="11" rx="1" fill="#fff"/>
+        <rect x="19.6" y="9" width="3.4" height="15" rx="1" fill="#fff"/>
+      </svg>
+      <div class="wordmark">ForaOS</div>
+    </div>
+
+    <div class="org-switch">
+      Kalimantan Forest Trust
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Dashboard
+      </a>
+      <a class="active" href="project-overview.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4"/><path d="M3 17l9 4 9-4"/></svg>
+        Projects
+      </a>
+      <a href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-6-4-6 4V3z"/></svg>
+        Watchlists
+      </a>
+      <a href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7V3z"/><path d="M10 12h6M10 16h6M10 8h3"/></svg>
+        Reports
+      </a>
+    </nav>
+
+    <div class="sidebar-spacer"></div>
+
+    <div class="sidebar-sync"><span class="pulse"></span> Synced with PBPH-RE</div>
+    <div class="sidebar-user">
+      <div class="avatar">AS</div>
+      <div>
+        <div class="who">A. Salim</div>
+        <div class="role">buyer_viewer</div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar-slim">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        Search projects, documents…
+      </div>
+      <div class="topbar-right">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode" onclick="document.documentElement.classList.toggle('dark')" style="background:none;padding:0;font:inherit;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+        </button>
+        <div class="icon-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 10-12 0c0 4-2 5-2 6h16c0-1-2-2-2-6z"/><path d="M10.3 21a2 2 0 003.4 0"/></svg>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </div>
+
+    <main class="page">
+
+      <div class="breadcrumb">Projects / <span class="cur">Sungai Merah Peatland Restoration</span></div>
+
+      <div class="wf-tag"><span class="badge">1</span> ProjectOverviewHeader — identity, location, status, freshness</div>
+      <div class="ov-header">
+        <div style="flex:1;">
+          <div class="name">Sungai Merah Peatland Restoration</div>
+          <div class="loc">Central Kalimantan, Indonesia &middot; Project ID <span class="mono">PR-KFT-0142</span></div>
+          <div class="badge-row">
+            <span class="chip good">Assurance: Verified</span>
+            <span class="chip info">Publication: Published</span>
+            <span class="chip neutral">Type: REDD+ / Peatland</span>
+          </div>
+          <div class="meta">Last updated 3 days ago &middot; synced from PBPH-RE on <span class="mono">10 Sep 2026, 09:00</span></div>
+        </div>
+        <div class="hero-thumb">Project boundary<br>map thumbnail</div>
+      </div>
+
+      <div class="wf-tag"><span class="badge">2</span> Sub-navigation — mirrors the project route table</div>
+      <nav class="tabs">
+        <a class="active" href="project-overview.html">Overview</a>
+        <a href="assurance.html">Assurance</a>
+        <a href="carbon-integrity.html">Carbon Integrity</a>
+        <a href="community.html">Community</a>
+        <a href="biodiversity.html">Biodiversity</a>
+        <a href="documents.html">Documents</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="data-quality.html">Data Quality</a>
+      </nav>
+
+      <div class="layout-2col">
+        <!-- main column -->
+        <div class="stack">
+          <div>
+            <div class="wf-tag"><span class="badge">3</span> Required buyer-facing content — description, key facts, map</div>
+            <div class="frame stack">
+              <div>
+                <div class="section-title">Project Description</div>
+                <div class="sk-line w-95"></div>
+                <div class="sk-line w-88"></div>
+                <div class="sk-line w-95"></div>
+                <div class="sk-line w-60"></div>
+              </div>
+
+              <div>
+                <div class="section-title">Key Facts</div>
+                <table class="facts-table">
+                  <tr><td class="k">Developer</td><td class="v">Kalimantan Forest Trust</td></tr>
+                  <tr><td class="k">Country / Region</td><td class="v">Indonesia — Central Kalimantan</td></tr>
+                  <tr><td class="k">Project Area</td><td class="v mono">18,400 ha</td></tr>
+                  <tr><td class="k">Project Type</td><td class="v">REDD+ / Peatland Restoration</td></tr>
+                  <tr><td class="k">Methodology / Standard</td><td class="v">VM0007 &middot; Verra VCS</td></tr>
+                  <tr><td class="k">Project Period</td><td class="v mono">2022 – 2042</td></tr>
+                </table>
+              </div>
+
+              <div>
+                <div class="section-title">Project Map</div>
+                <div class="map-block">Boundary + land-use map<br>(interactive, MapLibre GL / Leaflet)</div>
+                <div class="map-legend">Layers: project boundary &middot; land-use classes &middot; concession overlay &middot; precision per data-classification policy (§6.5)</div>
+              </div>
+
+              <div>
+                <div class="section-title">SDG Contributions</div>
+                <div class="sdg-row">
+                  <span class="sdg-chip">SDG 6</span>
+                  <span class="sdg-chip">SDG 13</span>
+                  <span class="sdg-chip">SDG 15</span>
+                  <span class="sdg-chip">SDG 1</span>
+                  <span class="sdg-chip">SDG 8</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- sidebar: MetricCard stack -->
+        <div class="stack">
+          <div class="wf-tag"><span class="badge">4</span> MetricCard stack — every value shows source / period / status</div>
+
+          <div class="metric-card">
+            <div class="label">Estimated Emission Reductions</div>
+            <div class="value-row"><span class="value mono">142,300</span><span class="unit">tCO₂e</span></div>
+            <div class="disclosure-line">Source: MRV monitoring report &middot; Period: Jan–Dec 2025 &middot; Status: internally_reviewed</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="label">Issued Credits (by vintage)</div>
+            <div class="value-row"><span class="value mono">98,600</span><span class="unit">credits</span></div>
+            <div class="disclosure-line">Source: Verra registry reference &middot; Period: Vintage 2024 &middot; Status: registry_referenced</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="label">Assurance Status</div>
+            <div class="value-row"><span class="chip good">Verified</span></div>
+            <div class="disclosure-line">VVB: SCS Global Services &middot; Evidence date: 15 Aug 2026 &middot; Status: verified</div>
+          </div>
+
+          <div class="panel">
+            <div class="section-title">Data Freshness</div>
+            <div style="font-size:11.5px;color:var(--gray-700);">Last synced from PBPH-RE<br><strong class="mono">10 Sep 2026, 09:00</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legend">
+        <h2>Annotation Reference</h2>
+        <ol>
+          <li><span class="badge">1</span><div><strong>ProjectOverviewHeader</strong> — name, location, assurance/publication status badges, and last-sync timestamp, per the screen components in §10.3.</div></li>
+          <li><span class="badge">2</span><div><strong>Sub-navigation tabs</strong> — one tab per route in the project route table (§10.2): Overview, Assurance, Carbon Integrity, Community, Biodiversity, Documents, Timeline, Data Quality.</div></li>
+          <li><span class="badge">3</span><div><strong>Required buyer-facing content</strong> — description, key facts, project map, and SDG contributions are the mandatory content items listed in §4.2.</div></li>
+          <li><span class="badge">4</span><div><strong>MetricCard stack</strong> — every disclosed figure carries source, period, and status metadata, satisfying the disclosure-metadata requirement in §4.2 and the estimated-vs-verified distinction in FR-VIS-06.</div></li>
+        </ol>
+      </div>
+
+      <div class="disclosure">Estimated figures are visually and textually distinguished from verified or registry-referenced figures per FR-VIS-06. Wireframe for internal review — structure and hierarchy only; colors/type mirror PBPH-RE's production theme.</div>
+    </main>
+  </div>
+</div>
+
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://perplexity.localhost","http://localhost:1420","http://127.0.0.1:1420","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>
