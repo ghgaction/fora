@@ -66,19 +66,26 @@
   }
 
   /* ---- button factory ---- */
+  function bookmarkSvg(filled) {
+    return '<svg class="follow-ico" viewBox="0 0 24 24" fill="' + (filled ? 'currentColor' : 'none') +
+           '" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+           '<path d="M6 3h12v18l-6-4-6 4V3z"/></svg>';
+  }
+  function labelText(followed) { return followed ? 'On watchlist' : 'Add to watchlist'; }
+  function buttonInner(followed) {
+    return bookmarkSvg(followed) + '<span class="follow-text">' + labelText(followed) + '</span>';
+  }
   function makeButton(followed) {
     var b = document.createElement('button');
     b.type = 'button';
     b.className = 'follow-btn';
     b.setAttribute('aria-pressed', followed ? 'true' : 'false');
-    b.innerHTML = '<span class="follow-star">' + (followed ? '★' : '☆') + '</span>' +
-                  '<span class="follow-text">' + (followed ? 'Following' : 'Follow') + '</span>';
+    b.innerHTML = buttonInner(followed);
     return b;
   }
   function paintButton(b, followed) {
     b.setAttribute('aria-pressed', followed ? 'true' : 'false');
-    b.querySelector('.follow-star').textContent = followed ? '★' : '☆';
-    b.querySelector('.follow-text').textContent = followed ? 'Following' : 'Follow';
+    b.innerHTML = buttonInner(followed);
   }
   function pageFile() {
     var p = location.pathname.split('/').pop();

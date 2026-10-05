@@ -532,7 +532,7 @@ html.dark .project-card:hover { box-shadow: 0 4px 14px 0 rgb(0 0 0 / 0.5); }
   border-color:var(--accent, #16a34a); color:var(--accent-text, #15803d);
   background:var(--accent-weak, #f0fdf4);
 }
-.follow-btn .follow-star { font-size:13px; line-height:1; }
+.follow-btn .follow-ico { width:13px; height:13px; flex:none; }
 .follow-btn--chip { margin-left:8px; }
 
 /* ===== My Watchlist page ===== */
