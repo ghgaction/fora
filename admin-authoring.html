@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe — Authoring | ForaOS Backend</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2216%22%20r%3D%2216%22%20fill%3D%22%2316a34a%22/%3E%3Crect%20x%3D%229%22%20y%3D%2217%22%20width%3D%223.4%22%20height%3D%227%22%20rx%3D%221%22%20fill%3D%22%23fff%22/%3E%3Crect%20x%3D%2214.3%22%20y%3D%2213%22%20width%3D%223.4%22%20height%3D%2211%22%20rx%3D%221%22%20fill%3D%22%23fff%22/%3E%3Crect%20x%3D%2219.6%22%20y%3D%229%22%20width%3D%223.4%22%20height%3D%2215%22%20rx%3D%221%22%20fill%3D%22%23fff%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<style>
+  /* ---- backend-only additions (buyer stylesheet untouched) ---- */
+  .brand-env {
+    font-size: 9px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--warn); background: var(--warn-soft); border-radius: 4px; padding: 2px 5px; margin-left: 6px;
+  }
+  .wf-chrome-note.backend { background: #1a130f; color: #fde68a; }
+  html.dark .wf-chrome-note.backend { background: #150f06; color: #fcd34d; }
+
+  .author-layout { display: grid; grid-template-columns: 280px 1fr; gap: 18px; align-items: start; }
+
+  /* section index */
+  .sec-index { display: flex; flex-direction: column; }
+  .sec-index .idx-head { font-size: 11px; text-transform: uppercase; letter-spacing: .03em; color: var(--gray-500); font-weight: 600; margin: 0 0 10px; }
+  .sec-item {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    padding: 9px 10px; border-radius: var(--radius); cursor: pointer; border: 1px solid transparent;
+    transition: background-color .12s ease, border-color .12s ease;
+  }
+  .sec-item:hover { background: var(--gray-100); }
+  .sec-item.on { background: var(--accent-soft); border-color: var(--accent); }
+  .sec-item .nm { font-size: 12.5px; font-weight: 500; color: var(--gray-900); }
+  .sec-item .kind { font-size: 10px; color: var(--gray-500); margin-top: 1px; }
+  .sec-item.on .nm { color: var(--accent-text); font-weight: 600; }
+  .idx-meter { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border-c); }
+
+  /* editor */
+  .editor { background: var(--surface); border: 1px solid var(--border-c); border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; }
+  .ed-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 14px 18px; border-bottom: 1px solid var(--border-c); }
+  .ed-head .t { font-size: 15px; font-weight: 700; }
+  .ed-head .k { font-size: 11px; color: var(--gray-500); margin-top: 2px; }
+  .ed-body { padding: 18px; display: flex; flex-direction: column; gap: 16px; }
+
+  .ed-field label { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .03em; color: var(--gray-500); font-weight: 600; margin-bottom: 6px; }
+  .ed-input, .ed-select, .ed-textarea {
+    width: 100%; border: 1px solid var(--border-c); border-radius: var(--radius); background: var(--surface);
+    font: inherit; font-size: 13px; color: var(--ink); padding: 9px 11px;
+  }
+  .ed-input::placeholder, .ed-textarea::placeholder { color: var(--gray-400); }
+  .ed-textarea { min-height: 120px; resize: vertical; line-height: 1.55; }
+
+  .ed-toolbar { display: flex; gap: 2px; border: 1px solid var(--border-c); border-bottom: none; border-radius: var(--radius) var(--radius) 0 0; padding: 5px 6px; background: var(--gray-100); }
+  .ed-toolbar + .ed-textarea { border-radius: 0 0 var(--radius) var(--radius); }
+  .tb-btn { width: 28px; height: 26px; border-radius: 4px; border: none; background: none; color: var(--gray-700); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; }
+  .tb-btn:hover { background: var(--gray-200); }
+  .tb-sep { width: 1px; background: var(--border-c); margin: 3px 4px; }
+
+  .media-attach {
+    display: flex; align-items: center; gap: 12px; border: 1px dashed var(--line); border-radius: var(--radius);
+    padding: 12px 14px; background: rgba(255,255,255,.5); font-size: 12px; color: var(--gray-500);
+  }
+  .media-thumb { width: 54px; height: 40px; border-radius: 4px; flex-shrink: 0; border: 1px dashed var(--line);
+    background: repeating-linear-gradient(135deg, var(--gray-100), var(--gray-100) 7px, #fff 7px, #fff 14px); }
+
+  .ed-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+  .gate-callout {
+    display: flex; align-items: flex-start; gap: 9px; font-size: 11.5px; line-height: 1.45; color: var(--gray-700);
+    background: var(--info-soft); border: 1px solid var(--border-c); border-radius: var(--radius); padding: 10px 12px;
+  }
+  .gate-callout svg { flex-shrink: 0; margin-top: 1px; color: var(--info); }
+  .gate-callout strong { color: var(--gray-900); }
+
+  .ed-actions { display: flex; align-items: center; gap: 8px; padding: 14px 18px; border-top: 1px solid var(--border-c); background: var(--gray-100); }
+  .ed-actions .spacer { flex: 1; }
+  .ed-saved { font-size: 11px; color: var(--gray-500); }
+
+  @media (max-width: 900px) {
+    .author-layout { grid-template-columns: 1fr; }
+    .ed-grid2 { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wf-chrome-note backend">Low-fidelity wireframe &mdash; <strong>ForaOS Backend · Authoring (/admin/authoring)</strong> &middot; native Fora content &mdash; drafts here are submitted to the Disclosure Gate, never published directly</div>
+
+<div class="shell">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-label="ForaOS">
+        <defs>
+          <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#22c55e"/>
+            <stop offset="1" stop-color="#15803d"/>
+          </linearGradient>
+        </defs>
+        <circle cx="16" cy="16" r="16" fill="url(#mark)"/>
+        <rect x="9" y="17" width="3.4" height="7" rx="1" fill="#fff"/>
+        <rect x="14.3" y="13" width="3.4" height="11" rx="1" fill="#fff"/>
+        <rect x="19.6" y="9" width="3.4" height="15" rx="1" fill="#fff"/>
+      </svg>
+      <div class="wordmark">ForaOS<span class="brand-env">Backend</span></div>
+    </div>
+
+    <div class="org-switch">
+      Kalimantan Forest Trust
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Home
+      </a>
+      <a href="admin-disclosure.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l3 3"/><path d="M16 4l2 2 4-4"/></svg>
+        Disclosure Gate
+      </a>
+      <a class="active" href="admin-authoring.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+        Authoring
+      </a>
+      <a href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Entitlements
+      </a>
+      <a href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        Notifications
+      </a>
+    </nav>
+
+    <div class="sidebar-spacer"></div>
+
+    <div class="sidebar-sync"><span class="pulse"></span> Autosaved · 12:41</div>
+    <div class="sidebar-user">
+      <div class="avatar">AD</div>
+      <div>
+        <div class="who">A. Dewi</div>
+        <div class="role">content_author</div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar-slim">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        Search content…
+      </div>
+      <div class="topbar-right">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode" onclick="document.documentElement.classList.toggle('dark')" style="background:none;padding:0;font:inherit;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2 12h2M20 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+        </button>
+        <div class="icon-btn"><span class="dot"></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </div>
+        <div class="avatar">AD</div>
+      </div>
+    </div>
+
+    <main class="page">
+      <div class="breadcrumb">Authoring <span style="color:var(--gray-400)">/</span> Kalimantan Forest Trust <span style="color:var(--gray-400)">/</span> <span class="cur">Journals &amp; articles</span></div>
+
+      <div class="page-head">
+        <div>
+          <h1>Author content</h1>
+          <p class="sub">Native Fora content for this project. Measured data (carbon, hydrology, species) comes from the PBPH-RE pipe &mdash; not authored here.</p>
+        </div>
+      </div>
+
+      <div class="author-layout">
+        <!-- LEFT: section index -->
+        <aside class="panel sec-index" aria-label="Authorable sections">
+          <div class="idx-head">Content for this project</div>
+
+          <div class="sec-item">
+            <div><div class="nm">Project profile</div><div class="kind">Methodology · crediting standard</div></div>
+            <span class="chip good">Published</span>
+          </div>
+          <div class="sec-item">
+            <div><div class="nm">Assurance &amp; registry status</div><div class="kind">V&amp;V · registry identity</div></div>
+            <span class="chip info">In gate</span>
+          </div>
+          <div class="sec-item">
+            <div><div class="nm">Rating</div><div class="kind">BeZero / Sylvera</div></div>
+            <span class="chip info">In gate</span>
+          </div>
+          <div class="sec-item">
+            <div><div class="nm">Credits by vintage</div><div class="kind">Issuance table</div></div>
+            <span class="chip good">Published</span>
+          </div>
+          <div class="sec-item">
+            <div><div class="nm">Claim-boundary statement</div><div class="kind">What the buyer may claim</div></div>
+            <span class="chip warn">Draft</span>
+          </div>
+          <div class="sec-item">
+            <div><div class="nm">Documents</div><div class="kind">PDD · MR · V&amp;V reports</div></div>
+            <span class="chip good">12 live</span>
+          </div>
+          <div class="sec-item on">
+            <div><div class="nm">Journals &amp; articles</div><div class="kind">Editorial stories</div></div>
+            <span class="chip warn">Draft</span>
+          </div>
+          <div class="sec-item">
+            <div><div class="nm">SDG programme narratives</div><div class="kind">Co-benefit stories</div></div>
+            <span class="chip neutral">Not started</span>
+          </div>
+
+          <div class="idx-meter">
+            <div class="meter">
+              <div class="meter-head"><span>Authored &amp; published</span><span class="count">4 / 8</span></div>
+              <div class="meter-track"><div class="meter-fill" style="width:50%"></div></div>
+              <div class="meter-note">2 in gate · 2 draft. Feeds the buyer disclosure-completeness meter.</div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- MAIN: editor -->
+        <section class="editor" aria-label="Editor">
+          <div class="ed-head">
+            <div>
+              <div class="t">Field journal — Q3 rewetting progress &amp; patrol notes</div>
+              <div class="k">Journal entry · last edited by A. Dewi, 3 min ago</div>
+            </div>
+            <span class="chip warn">Draft</span>
+          </div>
+
+          <div class="ed-body">
+            <div class="ed-field">
+              <label>Title</label>
+              <input class="ed-input" type="text" value="Q3 rewetting progress & patrol notes">
+            </div>
+
+            <div class="ed-field">
+              <label>Body</label>
+              <div class="ed-toolbar">
+                <button class="tb-btn" type="button" style="font-weight:800;">B</button>
+                <button class="tb-btn" type="button" style="font-style:italic;">I</button>
+                <span class="tb-sep"></span>
+                <button class="tb-btn" type="button">H</button>
+                <button class="tb-btn" type="button">&ldquo;</button>
+                <span class="tb-sep"></span>
+                <button class="tb-btn" type="button" aria-label="list">&#8801;</button>
+                <button class="tb-btn" type="button" aria-label="link">&#128279;</button>
+                <button class="tb-btn" type="button" aria-label="image">&#9634;</button>
+              </div>
+              <textarea class="ed-textarea">Rewetting across the eastern peat blocks reached 78% of the Q3 target. Two canal-blocking structures were completed and water tables held above −40 cm through the dry spell. Community patrols logged 14 sweeps with no new encroachment detected.</textarea>
+            </div>
+
+            <div class="ed-field">
+              <label>Media</label>
+              <div class="media-attach">
+                <div class="media-thumb"></div>
+                <div>Drag field photos or a map snapshot here, or <span style="color:var(--accent-text);font-weight:600;cursor:pointer;">browse</span>. Captions carried from PBPH-RE where linked.</div>
+              </div>
+            </div>
+
+            <div class="ed-grid2">
+              <div class="ed-field">
+                <label>Buyer-facing placement</label>
+                <select class="ed-select">
+                  <option>Community tab · Stories</option>
+                  <option>Project overview · Journal</option>
+                  <option>Biodiversity tab · Stories</option>
+                </select>
+              </div>
+              <div class="ed-field">
+                <label>Tags</label>
+                <input class="ed-input" type="text" value="hydrology, patrols, Q3-2025">
+              </div>
+            </div>
+
+            <div class="gate-callout">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l3 3"/></svg>
+              <span><strong>Not published directly.</strong> Submitting sends this entry to the <strong>Disclosure Gate</strong> as a <em>Pending</em> item. A disclosure officer makes the buyer-facing publish decision; it may be returned here with change requests.</span>
+            </div>
+          </div>
+
+          <div class="ed-actions">
+            <span class="ed-saved">Autosaved 12:41</span>
+            <div class="spacer"></div>
+            <button class="btn" type="button">Preview</button>
+            <button class="btn" type="button">Save draft</button>
+            <button class="btn primary" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+              Submit to Disclosure Gate
+            </button>
+          </div>
+        </section>
+      </div>
+
+      <div class="legend">
+        <h2>Annotation Reference</h2>
+        <ol>
+          <li><span class="badge">1</span><div><strong>Per-project scope</strong> — the org switcher selects one project; everything authored here is scoped to it. Structured records (profile, assurance, rating, credits, claim-boundary) and free-form streams (journals, documents, SDG) share one index.</div></li>
+          <li><span class="badge">2</span><div><strong>Section index with state</strong> — each content type shows Draft / In gate / Published, so an author sees the whole authoring surface and what still needs attention at a glance.</div></li>
+          <li><span class="badge">3</span><div><strong>Authored-only boundary</strong> — measured data (carbon, hydrology, species) is piped from PBPH-RE and is deliberately absent from this index; Fora authors documents, status, numbers, and stories.</div></li>
+          <li><span class="badge">4</span><div><strong>Editor</strong> — shown with the Journal type (most editorial); structured types reuse the same frame with fielded inputs instead of rich text. Buyer-facing placement decides where published content lands in the buyer app.</div></li>
+          <li><span class="badge">5</span><div><strong>Gate seam</strong> — <em>Submit to Disclosure Gate</em> creates a Pending row in that screen; content never goes live from here. &ldquo;Request changes&rdquo; in the gate returns the draft to this editor.</div></li>
+          <li><span class="badge">6</span><div><strong>Completeness meter</strong> — authored-and-published count feeds the buyer-facing disclosure-completeness meter (filled vs pending), the project&rsquo;s honesty signal.</div></li>
+        </ol>
+      </div>
+
+      <div class="disclosure">Wireframe for internal review — structure and hierarchy only. Content, names, and figures are placeholders. Colors, type, and radius mirror the buyer app / PBPH-RE production theme.</div>
+    </main>
+  </div>
+</div>
+
+</body>
+</html>
